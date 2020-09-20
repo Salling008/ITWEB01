@@ -1,0 +1,26 @@
+{
+  "name": "Assignment01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon ./start.js",
+    "mongod": "\"C:\\Program Files\\MongoDB\\Server\\4.4\\bin\\mongod.exe\" --dbpath=\"D:\\ITWEB\\Assignment01\\db\"",
+    "mongo": "\"C:\\Program Files\\MongoDB\\Server\\4.4\\bin\\mongo.exe\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "http-auth": "^4.1.2",
+    "mongoose": "^5.10.6",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
