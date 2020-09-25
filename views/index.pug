@@ -1,15 +1,9 @@
 extends layout
 
 block content
+  .main.container.text-xs-center
+    p.lead Signup to access your fitness pal, if you have an account login to see your workout plan
+    a.btn.btn-info-outline.btn-lg(href='/register') Get Started for FREE
+    p.lead If you have an account login to see your workout plan
+    a.btn.btn-info-outline.btn-lg(href='/login') Login
 
-  if registrations.length
-    table.listing-table.table-dark.table-striped
-      tr
-        th Name
-        th Email
-      each registration in registrations
-        tr
-          td= registration.name
-          td= registration.email
-  else
-    p No registrations yet :(
