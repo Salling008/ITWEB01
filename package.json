@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon ./start.js",
-    "mongod": "\"C:\\Program Files\\MongoDB\\Server\\4.4\\bin\\mongod.exe\" --dbpath=\"D:\\ITWEB\\Assignment01\\db\"",
-    "mongo": "\"C:\\Program Files\\MongoDB\\Server\\4.4\\bin\\mongo.exe\""
+    "watch": "nodemon ./start.js"
   },
   "keywords": [],
   "author": "",
