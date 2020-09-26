@@ -11,7 +11,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 if (process.env.NODE_ENV === 'production') {
-  mongoose.connect("mongodb+srv://dbUser:dbUserPassword@cluster0.8gtzz.azure.mongodb.net/<dbname>?retryWrites=true&w=majority");
+  mongoose.connect("mongodb+srv://dbUser:dbUserPassword@cluster0.8gtzz.azure.mongodb.net/Fitness?retryWrites=true&w=majority");
 }
 else {
   mongoose.connect("mongodb://localhost:27017/Fitness");
