@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "nodemon ./start.js",
-    "start": "node ./bin/www"
+    "start": "node ./start.js"
   },
   "keywords": [],
   "author": "",
