@@ -10,7 +10,7 @@ var exerciseSchema = new mongoose.Schema({
     required: true,
   },
   set: {
-    type: int,
+    type: Number,
     required: true,
   },
   reps: {
@@ -20,6 +20,9 @@ var exerciseSchema = new mongoose.Schema({
 });
 
 var workoutSchema = new mongoose.Schema({
+  id: {
+    type: mongoose.Schema.Types.ObjectId,
+  },
   title: {
     type: String,
     required: true,
@@ -28,4 +31,10 @@ var workoutSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
+  exercise: [exerciseSchema],
 });
+
+var Workout =
+  mongoose.models.workoutSchema || mongoose.model("Workout", workoutSchema);
+
+module.exports = Workout;

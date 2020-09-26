@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  p #{workout.title}
+    br
+    br
+    | Description: #{workout.description}
+    td(style="border: 1px solid green")
+    br
+    br
+    each exercise in workout.exercise
+        | Exercise: #{exercise.exercise}
+        td(style="border: 1px solid green")
+        br
+        | Exercise description: #{exercise.description}
+        td(style="border: 1px solid green")
+        br
+        | Sets: #{exercise.set}
+        td(style="border: 1px solid green")
+        br
+        | Reps: #{exercise.reps}
+        td(style="border: 1px solid green")
+        br
+        br
+
+  p.lead Add exercise to workout
+  a.btn.btn-info-outline.btn-lg(href='/addExercise?id=' + workout._id) Add exercise
+
+  p.lead Go back to home
+  a.btn.btn-info-outline.btn-lg(href='/') Go back
