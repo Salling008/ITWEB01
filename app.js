@@ -10,8 +10,12 @@ const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-mongoose.connect("mongodb://localhost:27017/Fitness");
+if (process.env.NODE_ENV === 'production') {
+  mongoose.connect("mongodb+srv://dbUser:dbUserPassword@cluster0.8gtzz.azure.mongodb.net/<dbname>?retryWrites=true&w=majority");
+}
+else {
+  mongoose.connect("mongodb://localhost:27017/Fitness");
+}
 var db = mongoose.connection;
 // mongo error
 db.on('error', console.error.bind(console, 'connection error:'));
