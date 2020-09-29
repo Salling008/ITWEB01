@@ -1,0 +1,38 @@
+body {
+  background-color: #ff1d58;
+  text-align: center;
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+a.button {
+  background-color: yellow; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+div.grid-container {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+div.grid-item {
+  display: grid;
+  border-style: solid;
+  height: auto;
+  width: auto;
+  align-content: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+p.exercise-title {
+  font-size: x-large;
+  font-weight: bold;
+}

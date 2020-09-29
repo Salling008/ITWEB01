@@ -1,4 +1,4 @@
-extends layout
+extends header
 
 block content
   p List of workouts
@@ -14,7 +14,7 @@ block content
             br
             br
             p.lead Go to workout
-            a.btn.btn-info-outline.btn-lg(href='/detailedWorkout?id='+ workout._id) Go  
+            a.btn.btn-info-outline.btn-lg(class='button' href='/detailedWorkout?id='+ workout._id) Go  
     else
         tr
           br
