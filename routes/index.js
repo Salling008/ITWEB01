@@ -1,7 +1,4 @@
 const express = require("express");
-const { check, validationResult } = require("express-validator");
-var mid = require("../middleware");
-
 
 const router = express.Router();
 
