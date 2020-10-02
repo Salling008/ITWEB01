@@ -1,6 +1,12 @@
 body {
+  background: linear-gradient(135deg, #00d4f0 25%, transparent 25%) -25px 0,
+    linear-gradient(225deg, #ff1d58 25%, transparent 50%) 0px 0,
+    linear-gradient(315deg, #00d4f0 25%, transparent 25%),
+    linear-gradient(45deg, #ff1d58 25%, transparent 50%);
+  background-size: 100px 100px;
   background-color: #ff1d58;
   text-align: center;
+  color: black;
 }
 
 h1 {
@@ -23,6 +29,8 @@ div.grid-container {
 }
 
 div.grid-item {
+  background-color: whitesmoke;
+  color: black;
   display: grid;
   border-style: solid;
   height: auto;
