@@ -23,6 +23,9 @@ var workoutSchema = new mongoose.Schema({
   id: {
     type: mongoose.Schema.Types.ObjectId,
   },
+  userId:{
+    type: String,
+  },
   title: {
     type: String,
     required: true,

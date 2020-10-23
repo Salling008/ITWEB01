@@ -3,7 +3,14 @@ var Workout = require("../models/workout");
 
 function workoutGet(req, res) {
   Workout.find()
-    .then((workouts) => {
+    .then((workoutsList) => {
+      var workouts = [];
+      workoutsList.forEach(workout => {
+        if(workout.userId == req.session.userId)
+        {
+          workouts.push(workout);
+        }
+      });
       res.render("workout", { workouts, title: "All workouts" });
     })
     .catch(() => {
@@ -14,10 +21,13 @@ function workoutGet(req, res) {
 function detailedWorkoutGet(req, res, id) {
   Workout.findById(id)
     .then((workout) => {
-      res.render("detailedWorkout", {
-        workout,
-        title: `Workout: ${workout.title}`,
-      });
+      if(workout.userId == req.session.userId)
+      {
+        res.render("detailedWorkout", {
+          workout,
+          title: `Workout: ${workout.title}`,
+        });
+      }
     })
     .catch(() => {
       res.send("Sorry no workouts was found :(");
@@ -38,6 +48,7 @@ function workoutCreatePost(req, res, next) {
   var workoutData = {
     title: req.body.title,
     description: req.body.description,
+    userId: req.session.userId,
     exercise: exerciseData,
   };
 
